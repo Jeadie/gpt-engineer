@@ -3,7 +3,7 @@ requires = ["setuptools", "wheel"]
 
 [project]
 name = "gpt-engineer"
-version = "0.0.1"
+version = "0.0.3"
 description = "Specify what you want it to build, the AI asks for clarification, and then builds it."
 readme = "README.md"
 requires-python = ">=3"
@@ -15,10 +15,11 @@ dependencies = [
 ]
 
 [project.scripts]
-gpt-engineer = 'gpt_engineer.main:execute'
+gpt-engineer = 'gpt_engineer.main:app'
 
 [tool.setuptools]
-packages = ["gpt_engineer"]
+packages = ["gpt_engineer", "gpt_engineer.ai"]
+
 
 # https://beta.ruff.rs/docs/configuration/#using-rufftoml
 [tool.ruff]
